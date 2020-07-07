@@ -1,32 +1,47 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+    <div class="tab">
+      <div class="tab-item">
+        <router-link to="/trying">进行中</router-link>
+      </div>
+      <div class="tab-item">
+        <router-link to="/tryend">已结束</router-link>
+      </div>
     </div>
-    <router-view/>
+    <keep-alive>
+      <router-view></router-view>
+    </keep-alive>
+    <router-view name="applyList"></router-view>
+    <router-view name="winnerList"></router-view>
   </div>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<style lang="scss" scoped>
+  @import "assets/scss/_variable.scss";
+  @import "assets/scss/_mixin.scss";
 
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
+  html{
+    background-color: #F2F7F7;
+  }
+  .tab{
+    display: flex;
+    width:100%;
+    height:80*$n;
+    line-height:80*$n;
+    background-color:#fff;
+    position: relative;
+    .tab-item{
+      flex:1;
+      text-align: center;
+      & > a{
+            display: block;
+            font-size: 28*$n;
+            color:$black;
+            &.active{
+               color: $origin;
+               @include border-1px($border-origin)
+             }
+      }
     }
   }
-}
 </style>

@@ -1,26 +1,50 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
-
-Vue.use(VueRouter)
+import { createRouter, createWebHashHistory } from 'vue-router'
+import Trying from '@/views/trying'
+import Tryend from '@/views/tryend'
+import TryingDetail from '@/views/trying-detail'
+import TryendDetail from '@/views/tryend-detail'
+import ApplyList from '@/views/applys-list'
+import WinnerList from '@/views/winner-list'
 
 const routes = [
   {
     path: '/',
-    name: 'Home',
-    component: Home
+    redirect: '/trying'
   },
   {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+    path: '/trying',
+    component: Trying,
+    children: [
+      {
+        path: ':id',
+        component: TryingDetail
+      }
+    ]
+  },
+  {
+    path: '/tryend',
+    component: Tryend,
+    children: [
+      {
+        path: ':id',
+        component: TryendDetail
+      }
+    ]
+  },
+  {
+    path: '/applys-list/:id',
+    name: 'applys-list',
+    component: ApplyList
+  },
+  {
+    path: '/winner-list/:id',
+    name: 'winner-list',
+    component: WinnerList
   }
 ]
 
-const router = new VueRouter({
+const router = createRouter({
+  history: createWebHashHistory(),
   routes
 })
 
