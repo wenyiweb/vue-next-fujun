@@ -4,9 +4,7 @@
 
 ## 手机扫描查看效果
 
-![](https://github.com/wenyiweb/vue-next-fujun/blob/master/static/imgs/code.png)
-
-## 先安装python2 [下载地址](https://www.python.org/download/releases/2.7.2/)
+![](https://github.com/wenyiweb/vue-next-fujun/blob/master/src/assets/imgs/code.png)
 
 ## Build Setup
 
@@ -26,7 +24,7 @@ npm run build --report
 
 ## 前端学习交流群，QQ群
 
-![](https://github.com/wenyiweb/vuejs-fujun/blob/master/static/imgs/qq.png)
+![](https://github.com/wenyiweb/vue-next-fujun/blob/master/src/assets/imgs/qq.png)
 
 
 ## 喜欢可以给一个star哦

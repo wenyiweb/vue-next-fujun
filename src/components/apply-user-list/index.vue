@@ -2,7 +2,7 @@
   <transition name="slide">
     <div class="container">
       <div class="header">
-        <back class="icon-back" @click.prevent="back"></back>
+        <back class="icon-back" @back="back"></back>
         <h1 class="title">{{title}}</h1>
       </div>
       <div class="apply-wrapper">
@@ -39,7 +39,7 @@ export default {
       nomore: false,
       firstLoad: true
     })
-    const tryItem = computed(() => store.state.trys.tryItem)
+    const tryItem = computed(() => store.getters['trys/tryItem'])
 
     function _getApplyList () {
       if (!tryItem.value) {

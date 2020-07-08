@@ -3,7 +3,6 @@ const state = {
 }
 const mutations = {
   SET_TRYITEM (state, tryItem) {
-    console.log(tryItem)
     state.tryItem = tryItem
   }
 }

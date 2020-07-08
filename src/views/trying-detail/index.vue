@@ -2,7 +2,7 @@
   <transition name="slide">
     <div v-if="state.detaildata.product" class="detailpage tryingDetail">
       <item-img :item="state.detaildata" :listType="state.listType"></item-img>
-      <back @click.prevent="hide"></back>
+      <back @back="hide"></back>
       <div class="infos" >
         <item-info :listType="state.listType" :item="state.detaildata"></item-info>
       </div>
@@ -53,7 +53,7 @@ export default {
       limit: 5,
       openmore: false
     })
-    const tryItem = computed(() => store.state.trys.tryItem)
+    const tryItem = computed(() => store.getters['trys/tryItem'])
     function _getTryDetail () {
       if (!tryItem.value) {
         router.push('/trying')

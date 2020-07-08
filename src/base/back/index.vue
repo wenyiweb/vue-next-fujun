@@ -6,7 +6,7 @@
 export default {
   setup (props, { emit }) {
     function hide () {
-      emit('click')
+      emit('back')
     }
     return {
       hide

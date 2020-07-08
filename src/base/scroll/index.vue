@@ -5,7 +5,7 @@
 </template>
 <script>
 import BScroll from 'better-scroll'
-import { onMounted, watch, ref, reactive } from 'vue'
+import { onMounted, ref, reactive, watchEffect } from 'vue'
 
 export default {
   props: {
@@ -92,7 +92,7 @@ export default {
     function scrollToElement () {
       state.scroll && state.scroll.scrollToElement.apply(state.scroll, arguments)
     }
-    watch(() => {
+    watchEffect(() => {
       // 监听data的变化，触发scroll的更新
       if (props.data) {
         setTimeout(() => {

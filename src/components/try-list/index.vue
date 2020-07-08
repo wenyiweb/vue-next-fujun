@@ -1,7 +1,14 @@
 <template>
   <div class="trygoods" ref="trying">
     <list-view :listType="state.listType" class="try-list" :nomore="state.nomore" :data="state.tryingList" @select="selectItem" @to-apply-list="toApplyList" @scroll-end="scrollEnd"></list-view>
-    <router-view></router-view>
+    <!-- <router-view></router-view> -->
+
+      <transition
+        name="slide"
+        mode="in-out"
+      >
+        <router-view></router-view>
+      </transition>
   </div>
 </template>
 <script>
