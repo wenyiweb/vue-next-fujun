@@ -4,7 +4,7 @@
 
 ## 手机扫描查看效果
 
-![](https://github.com/wenyiweb/vue-next-fujun/blob/master/src/assets/imgs/code.png)
+![](/src/assets/imgs/code.png)
 
 ## Build Setup
 
@@ -24,7 +24,7 @@ npm run build --report
 
 ## 前端学习交流群，QQ群
 
-![](https://github.com/wenyiweb/vue-next-fujun/blob/master/src/assets/imgs/qq.png)
+![](/src/assets/imgs/qq.png)
 
 
 ## 喜欢可以给一个star哦
